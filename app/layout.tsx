@@ -8,6 +8,8 @@ import { Analytics } from '@vercel/analytics/react'
 import './styles/globals.css'
 import styles from './styles/layout.module.css'
 import { merienda } from './styles/fonts'
+// Lib
+import { menuLinks } from './lib/helpers'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -32,7 +34,28 @@ export default function RootLayout ({ children }: { children: ReactNode }) {
           </nav>
         </header>
 
-        <main>{children}</main>
+        <main>
+          {children}
+
+          <nav className={styles.navigation}>
+            <ul className={styles.menu}>
+              {menuLinks.map((link) => {
+                return (
+                  <li key={link.name}>
+                    <Link href={link.href} className={styles.item}>
+                      <Image
+                        alt={`Icono de ${link.name}`}
+                        height={36}
+                        src={link.icon}
+                        width={36}
+                      />
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
+        </main>
 
         <Analytics />
       </body>
