@@ -2,14 +2,12 @@ import { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
 // Styles
-import './globals.css'
-import styles from './layout.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import './styles/globals.css'
+import styles from './styles/layout.module.css'
+import { merienda } from './styles/fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout ({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${merienda.className} antialiased`}>
         <header className={styles.header}>
           <nav>
             <Link href='/'>
