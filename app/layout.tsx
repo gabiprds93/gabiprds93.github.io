@@ -1,8 +1,13 @@
 import { ReactNode } from 'react'
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+
+// Styles
 import './globals.css'
+import styles from './layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +20,21 @@ export default function RootLayout ({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        {children}
+        <header className={styles.header}>
+          <nav>
+            <Link href='/'>
+              <Image
+                className={styles.logoContainer}
+                alt='Imagen de portada'
+                height={164}
+                src='/images/logo.png'
+                width={450}
+              />
+            </Link>
+          </nav>
+        </header>
+
+        <main>{children}</main>
 
         <Analytics />
       </body>
