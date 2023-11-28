@@ -6,9 +6,9 @@
 }
 
 .navigation {
-  bottom: 0;
-  left: 100%;
-  position: sticky;
+  position: absolute;
+  right: 10%;
+  top: calc(70vh + 169px - 52px);
   width: fit-content;
 }
 
