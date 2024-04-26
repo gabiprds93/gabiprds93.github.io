@@ -1,0 +1,24 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+
+const EXPERIENCIE = [
+  {
+    date: 'Actualmente...',
+    title: 'Titulo del cargo',
+    company: 'Empresa',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget leo eu velit consectetur gravida ac at justo. Mauris augue sapien, porttitor in elementum ac, suscipit at nulla. Sed finibus blandit mi, eu hendrerit dolor hendrerit sed. Praesent finibus a ex non vehicula. Cras efficitur lacus ac dapibus mollis. Sed malesuada massa eu ante condimentum auctor. Maecenas luctus, orci vitae egestas ornare, erat augue tincidunt massa, ac dictum risus ante id sem.',
+    link: 'https://www.linkedin.com/in/gparedesp/',
+  },
+]
+---
+
+<ol class='relative border-s border-gray-200 ml-3'>
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class='mb-10 ms-4'>
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
