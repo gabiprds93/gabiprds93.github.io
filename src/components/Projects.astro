@@ -1,29 +1,12 @@
 ---
-import NextJSIcon from '../icons/NextJS.astro'
-
-const TAGS = {
-  NEXT: {
-    name: 'Next.js',
-    class: 'bg-black text-white',
-    icon: NextJSIcon,
-  },
-}
-
-const PROJECTS = [
-  {
-    title: 'Titulo del proyecto',
-    description:
-      'Donec iaculis neque vel est lacinia, non consectetur arcu euismod. Proin dapibus vulputate orci, non imperdiet ante placerat sit amet. Aliquam vitae dolor id risus sodales ultrices. Donec diam ipsum, rhoncus ut ante sollicitudin, tristique viverra mi. Fusce in diam nibh. Integer mauris neque, interdum sed viverra at, laoreet non ligula. Nulla facilisi. Nam ut purus felis. Nunc suscipit nibh vel sem dignissim aliquam.',
-    link: 'https://svgl.vercel.apphttps://github.com/gabiprds93',
-    github: 'https://github.com/gabiprds93',
-    image: '/projects/project1.webp',
-    tags: [TAGS.NEXT],
-  },
-]
+import Github from '@/icons/Github.astro'
+import WebIcon from '@/icons/WebIcon.astro'
+import LinkButton from './LinkButton.astro'
+import { PROJECTS } from '@/constants'
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link, github }) => (
     <article class='text-white'>
       <h3 class='text-2xl font-semibold text-yellow-200 mb-2'>{title}</h3>
 
@@ -38,10 +21,21 @@ const PROJECTS = [
       </ul>
 
       <img
+        loading='lazy'
         class='rounded shadow-2xl shadow-white/10'
         src={image}
         alt={`Captura de pantalla del proyecto ${title}`}
       />
+
+      <div class='flex gap-4 mt-2'>
+        <LinkButton href={github}>
+          <Github class='size-6' /> Ver código fuente
+        </LinkButton>
+
+        <LinkButton href={link}>
+          <WebIcon class='size-6' /> Ir al sitio web
+        </LinkButton>
+      </div>
     </article>
   ))
 }

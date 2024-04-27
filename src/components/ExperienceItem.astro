@@ -1,5 +1,6 @@
 ---
 import ArrowRightIcon from '../icons/ArrowRight.astro'
+import LinkButton from './LinkButton.astro'
 
 interface Props {
   date: string
@@ -33,13 +34,8 @@ const { date, title, company, description, link } = Astro.props
 
 {
   link && (
-    <a
-      class='inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200'
-      href={link}
-      target='_blank'
-      rel='noopener noreferrer'
-    >
+    <LinkButton href={link}>
       Saber más <ArrowRightIcon class='size-5' />
-    </a>
+    </LinkButton>
   )
 }

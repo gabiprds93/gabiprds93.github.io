@@ -1,3 +1,5 @@
+import NextJSIcon from '@/icons/NextJS.astro'
+
 export const EXPERIENCE = [
   {
     date: 'Nov. 2021 - Nov. 2023',
@@ -52,5 +54,25 @@ export const EXPERIENCE = [
       'Maquetación de Mailing para envíos masivos a través de EmBlue.',
       'Resolución de conflictos en Gitlab sobre el Frontend.',
     ],
+  },
+]
+
+const TAGS = {
+  NEXT: {
+    name: 'Next.js',
+    class: 'bg-black text-white',
+    icon: NextJSIcon,
+  },
+}
+
+export const PROJECTS = [
+  {
+    title: 'Titulo del proyecto',
+    description:
+      'Donec iaculis neque vel est lacinia, non consectetur arcu euismod. Proin dapibus vulputate orci, non imperdiet ante placerat sit amet. Aliquam vitae dolor id risus sodales ultrices. Donec diam ipsum, rhoncus ut ante sollicitudin, tristique viverra mi. Fusce in diam nibh. Integer mauris neque, interdum sed viverra at, laoreet non ligula. Nulla facilisi. Nam ut purus felis. Nunc suscipit nibh vel sem dignissim aliquam.',
+    link: 'https://svgl.vercel.apphttps://github.com/gabiprds93',
+    github: 'https://github.com/gabiprds93',
+    image: '/projects/project1.webp',
+    tags: [TAGS.NEXT],
   },
 ]
