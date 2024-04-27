@@ -1,0 +1,23 @@
+---
+import Badge from '@/components/Badge.astro'
+import SectionContainer from '@/components/SectionContainer.astro'
+import SocialPill from '@/components/SocialPill.astro'
+import LinkedIn from '@/icons/LinkedIn.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title='Design System'>
+  <SectionContainer class='pt-44 pb-32 flex items-start flex-col gap-20'>
+    <article>
+      <h2 class="mb-4 text-xl font-semibold">&lt;Badge /&gt;</h2>
+      <Badge>Disponible para trabajar</Badge>
+    </article>
+
+    <article>
+      <h2 class="mb-4 text-xl font-semibold">&lt;SocialPill /&gt;</h2>
+      <SocialPill href='https://www.linkedin.com/in/gparedesp/'>
+        <LinkedIn class='size-4 md:size-6' /> LinkedIn
+      </SocialPill>
+    </article>
+  </SectionContainer>
+</Layout>
