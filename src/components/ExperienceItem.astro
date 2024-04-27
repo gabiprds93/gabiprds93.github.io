@@ -1,12 +1,15 @@
 ---
+import ArrowRightIcon from '../icons/ArrowRight.astro'
+
 interface Props {
   date: string
   title: string
-  description: string
+  company: string
+  description: string[]
   link?: string
 }
 
-const { date, title, description, link } = Astro.props
+const { date, title, company, description, link } = Astro.props
 ---
 
 <div
@@ -14,40 +17,29 @@ const { date, title, description, link } = Astro.props
 >
 </div>
 
-<time class='mb-1 text-sm font-normal leading-none text-sky-200/80'>
-  {date}
-</time>
-
 <h3 class='text-lg font-semibold text-yellow-200 mt-2'>
   {title}
 </h3>
 
-<p class='mb-4 text-base font-normal text-gray-200 text-pretty'>
-  {description}
-</p>
+<h4 class='mb-1 text-md font-normal text-white'>{company}</h4>
+
+<time class='mb-1 text-sm font-normal leading-none text-sky-200/80'>
+  {date}
+</time>
+
+<ol class='ml-5 mb-4 text-base font-normal text-gray-200 text-pretty list-disc'>
+  {description.map((item) => <li>{item}</li>)}
+</ol>
 
 {
   link && (
     <a
+      class='inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200'
       href={link}
-      class='inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200'
+      target='_blank'
+      rel='noopener noreferrer'
     >
-      Saber más
-      <svg
-        class='w-3 h-3 ms-2 rtl:rotate-180'
-        aria-hidden='true'
-        xmlns='http://www.w3.org/2000/svg'
-        fill='none'
-        viewBox='0 0 14 10'
-      >
-        <path
-          stroke='currentColor'
-          stroke-linecap='round'
-          stroke-linejoin='round'
-          stroke-width='2'
-          d='M1 5h12m0 0L9 1m4 4L9 9'
-        />
-      </svg>
+      Saber más <ArrowRightIcon class='size-5' />
     </a>
   )
 }
