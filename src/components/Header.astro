@@ -3,15 +3,15 @@ import { navItems } from '@/constants'
 ---
 
 <header
-  class='flex py-5 mx-auto fixed z-10 bg-black/80 left-0 right-0 justify-center'
+  class='flex mx-auto fixed z-10 bg-black/80 left-0 right-0 justify-center'
 >
   <nav>
-    <ul class='text-white flex gap-x-10'>
+    <ul class='text-white flex gap-0 sm:gap-10 px-2'>
       {
         navItems.map((link) => (
           <li>
             <a
-              class='relative block px-2 py-2 transition hover:text-red-400'
+              class='block p-3 transition hover:text-red-400 text-center'
               aria-label={link.label}
               href={link.url}
             >
