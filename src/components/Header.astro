@@ -1,25 +1,59 @@
-<header class='flex py-5 mx-auto fixed z-10 bg-black/80 left-0 right-0 justify-center'>
+---
+import { navItems } from '@/constants'
+---
+
+<header
+  class='flex py-5 mx-auto fixed z-10 bg-black/80 left-0 right-0 justify-center'
+>
   <nav>
-    <ul class='text-white flex gap-x-10 opacity-80'>
-      <li>
-        <a href='/#top'>Inicio</a>
-      </li>
-
-      <li>
-        <a href='/#experiencia'>Experiencia</a>
-      </li>
-
-      <li>
-        <a href='/#proyectos'>Proyectos</a>
-      </li>
-
-      <li>
-        <a href='/#sobre-mi'>Sobre mí</a>
-      </li>
-
-      <li>
-        <a href='/#contacto'>Contacto</a>
-      </li>
+    <ul class='text-white flex gap-x-10'>
+      {
+        navItems.map((link) => (
+          <li>
+            <a
+              class='relative block px-2 py-2 transition hover:text-red-400'
+              aria-label={link.label}
+              href={link.url}
+            >
+              {link.title}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>
+
+<script>
+  const sectionElements = document.querySelectorAll('section')
+  const linkElements = document.querySelectorAll('header nav ul li a')
+  const callback = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        linkElements.forEach((item) => {
+          if (item.getAttribute('aria-label') === entry.target.id) {
+            item.classList.add('text-red-400')
+          } else {
+            item.classList.remove('text-red-400')
+          }
+        })
+      }
+    })
+  }
+  const observer = new IntersectionObserver(callback, { threshold: 0.4 })
+
+  sectionElements.forEach((section) => {
+    observer.observe(section)
+  })
+
+  // Cleanup function
+  document.onvisibilitychange = () => {
+    if (document.visibilityState === 'hidden') {
+      observer.disconnect()
+    } else {
+      sectionElements.forEach((section) => {
+        observer.observe(section)
+      })
+    }
+  }
+</script>
