@@ -1,6 +1,5 @@
 ---
 import ArrowRightIcon from '../icons/ArrowRight.astro'
-import LinkButton from './LinkButton.astro'
 
 interface Props {
   date: string
@@ -18,24 +17,33 @@ const { date, title, company, description, link } = Astro.props
 >
 </div>
 
-<h3 class='text-lg font-semibold text-red-400 mt-2'>
-  {title}
-</h3>
+<div class='gap-6 grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))]'>
+  <div class='grid gap-1 content-start justify-items-start'>
+    <time class='text-orange-200'>
+      {date}
+    </time>
 
-<h4 class='mb-1 text-md font-normal text-white'>{company}</h4>
+    <h3 class='text-xl font-semibold text-red-400'>
+      {title}
+    </h3>
 
-<time class='mb-1 text-sm font-normal leading-none text-orange-200'>
-  {date}
-</time>
+    <h4 class='text-lg font-semibold'>{company}</h4>
 
-<ol class='ml-5 mb-4 text-base font-normal text-gray-200 text-pretty list-disc'>
-  {description.map((item) => <li>{item}</li>)}
-</ol>
+    {
+      link && (
+        <a
+          class='flex items-center gap-1 text-sm hover:text-red-300'
+          href={link}
+          rel='noopemer noreferrer'
+          target='_blank'
+        >
+          Sitio web <ArrowRightIcon class='size-4' />
+        </a>
+      )
+    }
+  </div>
 
-{
-  link && (
-    <LinkButton href={link}>
-      Saber más <ArrowRightIcon class='size-5' />
-    </LinkButton>
-  )
-}
+  <ol class='pl-5 text-gray-200 text-pretty list-disc'>
+    {description.map((item) => <li>{item}</li>)}
+  </ol>
+</div>

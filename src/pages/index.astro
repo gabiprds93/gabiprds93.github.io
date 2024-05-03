@@ -21,26 +21,30 @@ import AboutMe from '@/components/AboutMe.astro'
     <SectionContainer class='pb-32 pt-16' id='inicio'>
       <img src='/logo.png' alt='Logo personal' />
 
-      <img
-        class='rounded-full size-12 mb-4'
-        src='https://avatars.githubusercontent.com/u/29384714?v=4'
-        alt='Foto de Gabriela'
-      />
+      <div class='flex items-center gap-4 pb-4'>
+        <img
+          class='rounded-full size-20'
+          src='https://avatars.githubusercontent.com/u/29384714?v=4'
+          alt='Foto de Gabriela'
+        />
+
+        <a
+          class='flex hover:scale-105 transition'
+          href='https://www.linkedin.com/in/gparedesp/'
+          rel='noopemer noreferrer'
+          target='_blank'
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </div>
 
       <h1
-        class='text-white text-3xl md:text-4xl lg:text-5xl font-bold flex items-center gap-x-4 pb-6 lg:pb-10'
+        class='text-3xl md:text-4xl lg:text-5xl font-bold flex items-center gap-x-4 pb-6 lg:pb-10'
       >
-        ¡Hola!, soy Gabriela <a
-          href='https://www.linkedin.com/in/gparedesp/'
-          target='_blank'
-          rel='noopemer noreferrer'
-          class='flex hover:scale-105 transition'
-        >
-          <Badge>Disponible para trabajar</Badge></a
-        >
+        ¡Hola!, soy Gabriela
       </h1>
 
-      <h2 class='text-white text-xl lg:text-2xl opacity-80'>
+      <h2 class='text-xl lg:text-2xl'>
         Ingeniera de Sistemas |
         <span class='text-red-400'>Remote Frontend Developer</span>
         | JavaScript | ReactJs |
@@ -48,7 +52,7 @@ import AboutMe from '@/components/AboutMe.astro'
       </h2>
 
       <nav>
-        <ul class='text-white flex flex-wrap gap-4 mt-8'>
+        <ul class='flex flex-wrap gap-4 mt-8'>
           <li>
             <SocialPill href='https://www.linkedin.com/in/gparedesp/'>
               <LinkedInIcon class='size-4 md:size-6' /> LinkedIn
@@ -71,27 +75,21 @@ import AboutMe from '@/components/AboutMe.astro'
     </SectionContainer>
 
     <SectionContainer id='experiencia'>
-      <h2
-        class='text-white text-3xl font-semibold mb-6 flex gap-3 items-center'
-      >
+      <h2 class='text-3xl font-semibold mb-6 flex gap-3 items-center'>
         <BriefcaseIcon class='size-7' /> Experiencia Laboral
       </h2>
       <Experience />
     </SectionContainer>
 
     <SectionContainer id='proyectos'>
-      <h2
-        class='text-white text-3xl font-semibold mb-6 flex gap-3 items-center'
-      >
+      <h2 class='text-3xl font-semibold mb-6 flex gap-3 items-center'>
         <CodeIcon class='size-7' /> Proyectos
       </h2>
       <Projects />
     </SectionContainer>
 
     <SectionContainer id='sobre-mi'>
-      <h2
-        class='text-white text-3xl font-semibold mb-6 flex gap-3 items-center'
-      >
+      <h2 class='text-3xl font-semibold mb-6 flex gap-3 items-center'>
         <ProfileIcon class='size-7' /> Sobre mí
       </h2>
 

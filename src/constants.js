@@ -42,7 +42,7 @@ export const EXPERIENCE = [
   {
     date: 'Ago. 2018 - May. 2019',
     title: 'Analista Programador Frontend',
-    company: 'TECNIKA SOLUCIONES S.R.L.',
+    company: 'Tecnika Soluciones',
     description: ['Maquetación y programación de Landing Page.'],
   },
   {
