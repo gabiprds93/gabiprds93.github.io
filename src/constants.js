@@ -1,4 +1,9 @@
 import NextJSIcon from '@/icons/NextJS.astro'
+import ReactIcon from './icons/ReactIcon.astro'
+import BootstrapIcon from './icons/BootstrapIcon.astro'
+import ReduxIcon from './icons/ReduxIcon.astro'
+import SassIcon from './icons/SassIcon.astro'
+import TypeScriptIcon from './icons/TypeScriptIcon.astro'
 
 export const EXPERIENCE = [
   {
@@ -60,20 +65,54 @@ export const EXPERIENCE = [
 const TAGS = {
   NEXT: {
     name: 'Next.js',
-    class: 'bg-black text-white',
+    class: 'bg-[#888]',
     icon: NextJSIcon,
+  },
+  REACT: {
+    name: 'React',
+    class: 'bg-[#087ea4]',
+    icon: ReactIcon,
+  },
+  BOOTSTRAP: {
+    name: 'Bootstrap',
+    class: 'bg-[#3E1989]',
+    icon: BootstrapIcon,
+  },
+  REDUX: {
+    name: 'Redux',
+    class: 'bg-[#19013f]',
+    icon: ReduxIcon,
+  },
+  SASS: {
+    name: 'Sass',
+    class: 'bg-[#699]',
+    icon: SassIcon,
+  },
+  TYPESCRIPT: {
+    name: 'TypeScript',
+    class: 'bg-[#262626]',
+    icon: TypeScriptIcon,
   },
 }
 
 export const PROJECTS = [
   {
-    title: 'Titulo del proyecto',
+    title: 'Catálogo de Amiibos',
     description:
-      'Donec iaculis neque vel est lacinia, non consectetur arcu euismod. Proin dapibus vulputate orci, non imperdiet ante placerat sit amet. Aliquam vitae dolor id risus sodales ultrices. Donec diam ipsum, rhoncus ut ante sollicitudin, tristique viverra mi. Fusce in diam nibh. Integer mauris neque, interdum sed viverra at, laoreet non ligula. Nulla facilisi. Nam ut purus felis. Nunc suscipit nibh vel sem dignissim aliquam.',
-    link: 'https://svgl.vercel.apphttps://github.com/gabiprds93',
-    github: 'https://github.com/gabiprds93',
-    image: '/projects/project1.webp',
-    tags: [TAGS.NEXT],
+      'Plataforma que muestra la lista de amiibos usando AmiiboAPI. Hecho con Next.js, React, TypeScript, Sass. Fue una prueba para una postulación.',
+    link: 'https://amiibos.vercel.app/',
+    github: 'https://github.com/gabiprds93/amiibo-catalog-nextjs',
+    image: '/projects/amiibos.webp',
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TYPESCRIPT, TAGS.SASS],
+  },
+  {
+    title: 'Disney Trivia',
+    description:
+      'Trivia sobre películas de Disney. Hecho con React, Redux, Bootstrap. Este fue un ejercicio que se hizo en el bootcamp de Laboratoria.',
+    link: 'https://gabiprds93.github.io/Trivia-Redux/',
+    github: 'https://github.com/gabiprds93/Trivia-Redux/',
+    image: '/projects/trivia.webp',
+    tags: [TAGS.REACT, TAGS.REDUX, TAGS.BOOTSTRAP],
   },
 ]
 

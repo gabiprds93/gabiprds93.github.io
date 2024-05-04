@@ -5,37 +5,43 @@ import LinkButton from './LinkButton.astro'
 import { PROJECTS } from '@/constants'
 ---
 
-{
-  PROJECTS.map(({ title, description, tags, image, link, github }) => (
-    <article class='text-white'>
-      <h3 class='text-2xl font-semibold text-red-400 mb-2'>{title}</h3>
+<div class='grid gap-10'>
+  {
+    PROJECTS.map(({ title, description, tags, image, link, github }) => (
+      <article class='grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] gap-4'>
+        <div class='grid gap-2 items-start'>
+          <h3 class='text-2xl font-semibold text-red-400'>{title}</h3>
 
-      <p class='text-lg mb-4 text-pretty'>{description}</p>
+          <ul class='flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <li
+                class={`flex gap-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
+              >
+                <tag.icon class='size-4' /> {tag.name}
+              </li>
+            ))}
+          </ul>
 
-      <ul class='flex gap-2'>
-        {tags.map((tag) => (
-          <li class={`flex gap-2 rounded-full text-xs py-1 px-2 ${tag.class}`}>
-            <tag.icon class='size-4' /> {tag.name}
-          </li>
-        ))}
-      </ul>
+          <p class='text-gray-200 text-pretty'>{description}</p>
 
-      <img
-        loading='lazy'
-        class='rounded shadow-2xl shadow-white/10'
-        src={image}
-        alt={`Captura de pantalla del proyecto ${title}`}
-      />
+          <div class='flex gap-4'>
+            <LinkButton href={github}>
+              <Github class='size-6' /> Repositorio
+            </LinkButton>
 
-      <div class='flex gap-4 mt-2'>
-        <LinkButton href={github}>
-          <Github class='size-6' /> Ver código fuente
-        </LinkButton>
+            <LinkButton href={link}>
+              <WebIcon class='size-6' /> Demo
+            </LinkButton>
+          </div>
+        </div>
 
-        <LinkButton href={link}>
-          <WebIcon class='size-6' /> Ir al sitio web
-        </LinkButton>
-      </div>
-    </article>
-  ))
-}
+        <img
+          loading='lazy'
+          class='rounded shadow-2xl shadow-white/10'
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+        />
+      </article>
+    ))
+  }
+</div>
