@@ -4,6 +4,9 @@ import BootstrapIcon from './icons/BootstrapIcon.astro'
 import ReduxIcon from './icons/ReduxIcon.astro'
 import SassIcon from './icons/SassIcon.astro'
 import TypeScriptIcon from './icons/TypeScriptIcon.astro'
+import HTMLIcon from './icons/HTMLIcon.astro'
+import CSSIcon from './icons/CSSIcon.astro'
+import JavaScriptIcon from './icons/JavaScriptIcon.astro'
 
 export const EXPERIENCE = [
   {
@@ -93,17 +96,41 @@ const TAGS = {
     class: 'bg-[#262626]',
     icon: TypeScriptIcon,
   },
+  HTML: {
+    name: 'HTML5',
+    class: 'bg-[#832a00]',
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: 'CSS3',
+    class: 'bg-[#002678]',
+    icon: CSSIcon,
+  },
+  JAVASCRIPT: {
+    name: 'JavaScript',
+    class: 'bg-[#afa100]',
+    icon: JavaScriptIcon,
+  },
 }
 
 export const PROJECTS = [
   {
     title: 'Catálogo de Amiibos',
     description:
-      'Plataforma que muestra la lista de amiibos usando AmiiboAPI. Hecho con Next.js, React, TypeScript, Sass. Fue una prueba para una postulación.',
+      'Plataforma que muestra la lista de Amiibos usando AmiiboAPI. Hecho con Next.js, React, TypeScript, Sass. Fue una prueba para una postulación.',
     link: 'https://amiibos.vercel.app/',
     github: 'https://github.com/gabiprds93/amiibo-catalog-nextjs',
     image: '/projects/amiibos.webp',
     tags: [TAGS.NEXT, TAGS.REACT, TAGS.TYPESCRIPT, TAGS.SASS],
+  },
+  {
+    title: 'Pokédex',
+    description:
+      'Plataforma con la lista de Pokémons usando PokéApi. Hecho con Next.js, React, TypeScript. Se realizó para una prueba técnica',
+    link: 'https://complete-pokedex.vercel.app/',
+    github: 'https://github.com/gabiprds93/pokedex',
+    image: '/projects/pokedex.webp',
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TYPESCRIPT],
   },
   {
     title: 'Disney Trivia',
@@ -113,6 +140,15 @@ export const PROJECTS = [
     github: 'https://github.com/gabiprds93/Trivia-Redux/',
     image: '/projects/trivia.webp',
     tags: [TAGS.REACT, TAGS.REDUX, TAGS.BOOTSTRAP],
+  },
+  {
+    title: 'Run Maze',
+    description:
+      'Laberinto donde se tiene que encontrar la salida. Hecho con React, Redux, Bootstrap. Este fue un ejercicio que se hizo en el bootcamp de Laboratoria.',
+    link: 'https://gabiprds93.github.io/Laberinto/',
+    github: 'https://github.com/gabiprds93/Laberinto/',
+    image: '/projects/maze.webp',
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
 ]
 
