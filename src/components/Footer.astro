@@ -1,22 +1,22 @@
 ---
-import { navItems } from '@/constants'
-import LinkedIn from '@/icons/LinkedIn.astro'
-import Github from '@/icons/Github.astro'
+import { navItems } from "@/constants"
+import LinkedIn from "@/icons/LinkedIn.astro"
+import Github from "@/icons/Github.astro"
 
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class='rounded-lg shadow bg-black/20 backdrop-blur-lg mx-6 my-10'>
+<footer class="mx-6 my-10 rounded-lg bg-black/20 shadow backdrop-blur-lg">
   <div
-    class='w-full mx-auto max-w-screen-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4'
+    class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-4 p-4 sm:flex-row"
   >
     <ul
-      class='flex flex-wrap items-center text-sm font-medium text-white/90 gap-4'
+      class="flex flex-wrap items-center gap-4 text-sm font-medium text-white/90"
     >
       {
         navItems.map((link) => (
           <li>
-            <a href={link.url} class='hover:underline'>
+            <a href={link.url} class="hover:underline">
               {link.title}
             </a>
           </li>
@@ -24,38 +24,38 @@ const currentYear = new Date().getFullYear()
       }
     </ul>
 
-    <ul class='text-white flex flex-wrap gap-4'>
+    <ul class="flex flex-wrap gap-4 text-white">
       <li>
         <a
-          href='https://www.linkedin.com/in/gparedesp/'
-          rel='noopener noreferrer'
-          target='_blank'
-          title='LinkedIn'
+          href="https://www.linkedin.com/in/gparedesp/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="LinkedIn"
         >
-          <LinkedIn class='size-6' />
+          <LinkedIn class="size-6" />
         </a>
       </li>
 
       <li>
         <a
-          href='https://github.com/gabiprds93'
-          rel='noopener noreferrer'
-          target='_blank'
-          title='GitHub'
+          href="https://github.com/gabiprds93"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="GitHub"
         >
-          <Github class='size-6' />
+          <Github class="size-6" />
         </a>
       </li>
     </ul>
 
-    <span class='text-sm text-orange-200'>
+    <span class="text-sm text-orange-200">
       © {currentYear}
 
       <a
-        href='https://www.linkedin.com/in/gparedesp/'
-        class='hover:underline'
-        rel='noopener noreferrer'
-        target='_blank'
+        href="https://www.linkedin.com/in/gparedesp/"
+        class="hover:underline"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Gabriela Paredes
       </a>

@@ -1,17 +1,17 @@
 ---
-import { navItems } from '@/constants'
+import { navItems } from "@/constants"
 ---
 
 <header
-  class='flex mx-auto fixed z-10 bg-black/80 left-0 right-0 justify-center'
+  class="fixed left-0 right-0 z-10 mx-auto flex justify-center bg-black/80"
 >
   <nav>
-    <ul class='text-white flex gap-0 sm:gap-10 px-2'>
+    <ul class="flex gap-0 px-2 text-white sm:gap-10">
       {
         navItems.map((link) => (
           <li>
             <a
-              class='block p-3 transition hover:text-red-400 text-center'
+              class="block p-3 text-center transition hover:text-red-400"
               aria-label={link.label}
               href={link.url}
             >
@@ -25,16 +25,16 @@ import { navItems } from '@/constants'
 </header>
 
 <script>
-  const sectionElements = document.querySelectorAll('section')
-  const linkElements = document.querySelectorAll('header nav ul li a')
+  const sectionElements = document.querySelectorAll("section")
+  const linkElements = document.querySelectorAll("header nav ul li a")
   const callback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         linkElements.forEach((item) => {
-          if (item.getAttribute('aria-label') === entry.target.id) {
-            item.classList.add('text-red-400')
+          if (item.getAttribute("aria-label") === entry.target.id) {
+            item.classList.add("text-red-400")
           } else {
-            item.classList.remove('text-red-400')
+            item.classList.remove("text-red-400")
           }
         })
       }
@@ -48,7 +48,7 @@ import { navItems } from '@/constants'
 
   // Cleanup function
   document.onvisibilitychange = () => {
-    if (document.visibilityState === 'hidden') {
+    if (document.visibilityState === "hidden") {
       observer.disconnect()
     } else {
       sectionElements.forEach((section) => {

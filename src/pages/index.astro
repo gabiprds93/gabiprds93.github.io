@@ -1,96 +1,98 @@
 ---
-import Badge from '../components/Badge.astro'
-import Layout from '../layouts/Layout.astro'
-import LinkedInIcon from '../icons/LinkedIn.astro'
-import GithubIcon from '../icons/Github.astro'
-import MailIcon from '../icons/Mail.astro'
-import SocialPill from '../components/SocialPill.astro'
-import Experience from '../components/Experience.astro'
-import SectionContainer from '../components/SectionContainer.astro'
-import BriefcaseIcon from '../icons/Briefcase.astro'
-import CodeIcon from '../icons/Code.astro'
-import Projects from '../components/Projects.astro'
-import ProfileIcon from '@/icons/ProfileIcon.astro'
-import AboutMe from '@/components/AboutMe.astro'
+import LinkedInIcon from "../icons/LinkedIn.astro"
+import GithubIcon from "../icons/Github.astro"
+import MailIcon from "../icons/Mail.astro"
+import BriefcaseIcon from "../icons/Briefcase.astro"
+import CodeIcon from "../icons/Code.astro"
+import ProfileIcon from "@/icons/ProfileIcon.astro"
+import AboutMe from "@/components/AboutMe.astro"
+import Layout from "@/layouts/Layout.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Badge from "@/components/Badge.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import Experience from "@/components/Experience.astro"
+import Projects from "@/components/Projects.astro"
 ---
 
 <Layout
-  title='Portafolio de Gabriela - Desarrollador y Programador Web con 6 años de experiencia'
+  title="Portafolio de Gabriela - Desarrollador y Programador Web con 6 años de experiencia"
 >
-  <main class='px-6'>
-    <SectionContainer class='pb-32 pt-16' id='inicio'>
-      <img src='/logo.png' alt='Logo personal' />
+  <main class="px-6">
+    <SectionContainer class="pb-32 pt-16" id="inicio">
+      <img src="/logo.png" alt="Logo personal" />
 
-      <div class='flex items-center gap-4 pb-4'>
+      <div class="flex items-center gap-4 pb-4">
         <img
-          class='rounded-full size-20'
-          src='https://avatars.githubusercontent.com/u/29384714?v=4'
-          alt='Foto de Gabriela'
+          class="size-20 rounded-full"
+          src="https://avatars.githubusercontent.com/u/29384714?v=4"
+          alt="Foto de Gabriela"
         />
 
         <a
-          class='flex hover:scale-105 transition'
-          href='https://www.linkedin.com/in/gparedesp/'
-          rel='noopemer noreferrer'
-          target='_blank'
+          class="flex transition hover:scale-105"
+          href="https://www.linkedin.com/in/gparedesp/"
+          rel="noopemer noreferrer"
+          target="_blank"
         >
           <Badge>Disponible para trabajar</Badge>
         </a>
       </div>
 
       <h1
-        class='text-3xl md:text-4xl lg:text-5xl font-bold flex items-center gap-x-4 pb-6 lg:pb-10'
+        class="flex items-center gap-x-4 pb-6 text-3xl font-bold md:text-4xl lg:pb-10 lg:text-5xl"
       >
         ¡Hola!, soy Gabriela
       </h1>
 
-      <h2 class='text-xl lg:text-2xl'>
+      <h2 class="text-xl lg:text-2xl">
         Ingeniera de Sistemas |
-        <span class='text-red-400'>Remote Frontend Developer</span>
+        <span class="text-red-400">Remote Frontend Developer</span>
         | JavaScript | ReactJs |
-        <span class='text-red-400'>+6 años de experiencia</span>
+        <span class="text-red-400">+6 años de experiencia</span>
       </h2>
 
       <nav>
-        <ul class='flex flex-wrap gap-4 mt-8'>
+        <ul class="mt-8 flex flex-wrap gap-4">
           <li>
-            <SocialPill href='https://www.linkedin.com/in/gparedesp/'>
-              <LinkedInIcon class='size-4 md:size-6' /> LinkedIn
+            <SocialPill href="https://www.linkedin.com/in/gparedesp/">
+              <LinkedInIcon class="size-4 md:size-6" /> LinkedIn
             </SocialPill>
           </li>
 
           <li>
-            <SocialPill href='https://github.com/gabiprds93'>
-              <GithubIcon class='size-4 md:size-6' /> Github
+            <SocialPill href="https://github.com/gabiprds93">
+              <GithubIcon class="size-4 md:size-6" /> Github
             </SocialPill>
           </li>
 
           <li>
-            <SocialPill href='mailto:gabrielaparedesp1993@gmail.com'>
-              <MailIcon class='size-4 md:size-6' /> gabrielaparedesp1993@gmail.com
+            <SocialPill href="mailto:gabrielaparedesp1993@gmail.com">
+              <MailIcon class="size-4 md:size-6" /> gabrielaparedesp1993@gmail.com
             </SocialPill>
           </li>
         </ul>
       </nav>
     </SectionContainer>
 
-    <SectionContainer id='experiencia'>
-      <h2 class='text-3xl font-semibold mb-6 flex gap-3 items-center'>
-        <BriefcaseIcon class='size-7' /> Experiencia Laboral
+    <SectionContainer id="experiencia">
+      <h2 class="mb-6 flex items-center gap-3 text-3xl font-semibold">
+        <BriefcaseIcon class="size-7" /> Experiencia Laboral
       </h2>
+
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id='proyectos'>
-      <h2 class='text-3xl font-semibold mb-6 flex gap-3 items-center'>
-        <CodeIcon class='size-7' /> Proyectos
+    <SectionContainer id="proyectos">
+      <h2 class="mb-6 flex items-center gap-3 text-3xl font-semibold">
+        <CodeIcon class="size-7" /> Proyectos
       </h2>
+
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id='sobre-mi'>
-      <h2 class='text-3xl font-semibold mb-6 flex gap-3 items-center'>
-        <ProfileIcon class='size-7' /> Sobre mí
+    <SectionContainer id="sobre-mi">
+      <h2 class="mb-6 flex items-center gap-3 text-3xl font-semibold">
+        <ProfileIcon class="size-7" /> Sobre mí
       </h2>
 
       <AboutMe />
