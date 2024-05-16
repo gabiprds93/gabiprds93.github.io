@@ -10,5 +10,12 @@ export default {
         semi: false,
       },
     },
+    {
+      files: "*.ts",
+      options: {
+        parser: "typescript",
+        semi: false,
+      },
+    },
   ],
 };
