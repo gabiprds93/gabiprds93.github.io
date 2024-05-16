@@ -1,12 +1,12 @@
-import NextJSIcon from "@/icons/NextJS.astro";
-import ReactIcon from "./icons/ReactIcon.astro";
-import BootstrapIcon from "./icons/BootstrapIcon.astro";
-import ReduxIcon from "./icons/ReduxIcon.astro";
-import SassIcon from "./icons/SassIcon.astro";
-import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
-import HTMLIcon from "./icons/HTMLIcon.astro";
-import CSSIcon from "./icons/CSSIcon.astro";
-import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
+import NextJSIcon from "@/icons/NextJS.astro"
+import ReactIcon from "./icons/ReactIcon.astro"
+import BootstrapIcon from "./icons/BootstrapIcon.astro"
+import ReduxIcon from "./icons/ReduxIcon.astro"
+import SassIcon from "./icons/SassIcon.astro"
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro"
+import HTMLIcon from "./icons/HTMLIcon.astro"
+import CSSIcon from "./icons/CSSIcon.astro"
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro"
 
 export const EXPERIENCE = [
   {
@@ -63,7 +63,7 @@ export const EXPERIENCE = [
       "Resolución de conflictos en Gitlab sobre el Frontend.",
     ],
   },
-];
+]
 
 const TAGS = {
   NEXT: {
@@ -111,7 +111,7 @@ const TAGS = {
     class: "bg-[#afa100]",
     icon: JavaScriptIcon,
   },
-};
+}
 
 export const PROJECTS = [
   {
@@ -150,7 +150,7 @@ export const PROJECTS = [
     image: "/projects/maze.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
-];
+]
 
 export const navItems = [
   {
@@ -173,4 +173,4 @@ export const navItems = [
     label: "sobre-mi",
     url: "/#sobre-mi",
   },
-];
+]
