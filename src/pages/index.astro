@@ -19,7 +19,10 @@ import Layout from "@/layouts/Layout.astro"
 >
   <main class="px-6">
     <SectionContainer class="pb-32 pt-16" id="inicio">
-      <img src="/logo.png" alt="Logo personal" />
+      <picture>
+        <source media="(max-width: 640px)" srcset="logo-small.png" />
+        <img src="/logo.png" alt="Logo personal" />
+      </picture>
 
       <div class="flex items-center gap-4 pb-4">
         <img
