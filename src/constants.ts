@@ -68,7 +68,7 @@ export const EXPERIENCE = [
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-[#888]",
+    class: "bg-[#595959]",
     icon: NextjsIcon,
   },
   REACT: {
@@ -88,7 +88,7 @@ const TAGS = {
   },
   SASS: {
     name: "Sass",
-    class: "bg-[#699]",
+    class: "bg-[#405E5E]",
     icon: SassIcon,
   },
   TYPESCRIPT: {
@@ -108,7 +108,7 @@ const TAGS = {
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-[#afa100]",
+    class: "bg-[#615800]",
     icon: JavaScriptIcon,
   },
 }
