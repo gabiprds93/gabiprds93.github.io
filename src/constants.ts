@@ -1,12 +1,12 @@
-import NextJSIcon from "@/icons/NextJS.astro"
-import ReactIcon from "./icons/ReactIcon.astro"
-import BootstrapIcon from "./icons/BootstrapIcon.astro"
-import ReduxIcon from "./icons/ReduxIcon.astro"
-import SassIcon from "./icons/SassIcon.astro"
-import TypeScriptIcon from "./icons/TypeScriptIcon.astro"
-import HTMLIcon from "./icons/HTMLIcon.astro"
-import CSSIcon from "./icons/CSSIcon.astro"
-import JavaScriptIcon from "./icons/JavaScriptIcon.astro"
+import NextjsIcon from "@/icons/NextjsIcon.astro"
+import ReactIcon from "@/icons/ReactIcon.astro"
+import BootstrapIcon from "@/icons/BootstrapIcon.astro"
+import ReduxIcon from "@/icons/ReduxIcon.astro"
+import SassIcon from "@/icons/SassIcon.astro"
+import TypeScriptIcon from "@/icons/TypeScriptIcon.astro"
+import HTMLIcon from "@/icons/HTMLIcon.astro"
+import CSSIcon from "@/icons/CSSIcon.astro"
+import JavaScriptIcon from "@/icons/JavaScriptIcon.astro"
 
 export const EXPERIENCE = [
   {
@@ -69,7 +69,7 @@ const TAGS = {
   NEXT: {
     name: "Next.js",
     class: "bg-[#888]",
-    icon: NextJSIcon,
+    icon: NextjsIcon,
   },
   REACT: {
     name: "React",
