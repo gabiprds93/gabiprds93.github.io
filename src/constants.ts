@@ -10,6 +10,17 @@ import JavaScriptIcon from "@/icons/JavaScriptIcon.astro"
 
 export const EXPERIENCE = [
   {
+    date: "Ago. 2024 - Actualidad",
+    title: "Software Engineer",
+    company: "Ravn",
+    description: [
+      "Migrar proyecto de JavaScript a TypeScript.",
+      "Code review a detalle para la mejora y mantenimiento del código.",
+      "Sugerencias para una mejor organización de la estructura del proyecto.",
+    ],
+    link: "https://www.ravn.com/",
+  },
+  {
     date: "Nov. 2021 - Nov. 2023",
     title: "Frontend Developer",
     company: "Terapify",
